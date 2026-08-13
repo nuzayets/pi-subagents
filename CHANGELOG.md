@@ -10,6 +10,7 @@
 - Add simple terminal examples for FleetView, the async widget, and inline tool display. Thanks to @czottmann for #1050.
 
 ### Fixed
+- Keep subagent artifacts and automatic mission records outside project worktrees by default, so read-only workflows do not make clean-tree checks fail (#1062).
 - Tell parents to continue after an async launch only until the next dependency barrier, so they consume a child result before dependent work makes it obsolete. Thanks to @exuanbo for #1045.
 - Tell wait callers to reply and wait instead of reviving a wrapper that detached for intercom coordination. Thanks to @yayamaz for #1053.
 - Derive default `workflowScript` child report paths from the workflow output path while keeping the workflow aggregate report separate, and reject child output path collisions before launch (#1038).
